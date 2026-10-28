@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory - CRUD</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Inventory Management</h1>
+        <p class="subtitle">Add, view, update and delete items</p>
+
+        <form id="bookForm">
+            <input type="hidden" id="bookId">
+
+            <label for="name">Item Name</label>
+            <input type="text" id="name"
+                   placeholder="Enter item name" required>
+
+            <label for="price">Price (₹)</label>
+            <input type="number" id="price"
+                   placeholder="Enter price" min="0"
+                   step="0.01" required>
+
+            <div class="buttons">
+                <button type="submit" id="submitBtn">Add Item</button>
+                <button type="button" id="cancelBtn"
+                        class="cancel" hidden>Cancel Edit</button>
+            </div>
+        </form>
+
+        <p id="message" role="status"></p>
+
+        <h2>Item List</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th>Price (₹)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script6.js"></script>
+</body>
+</html>
